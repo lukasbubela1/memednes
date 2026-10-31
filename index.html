@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMEDNES</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">MEMEDNES</div>
+        <nav class="nav-links">
+            <a href="https://instagram.com" target="_blank" class="btn-top">IG</a>
+            <a href="https://whatsapp.com" target="_blank" class="btn-top">WhatsApp kanál</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="ticker">
+            <span>+++ NEJČERSTVĚJŠÍ MEME V SÍTI +++ AKTUALIZOVÁNO KAŽDÝ DEN +++ ZMRAZTE SVŮJ SCROLL +++</span>
+        </div>
+
+        <section id="meme-feed" class="meme-grid">
+            <!-- Memy se načtou dynamicky z script.js -->
+        </section>
+
+        <nav class="pagination">
+            <button id="btn-prev" class="pg-btn">Předchozí</button>
+            <span id="page-info" class="pg-info">Strana 1 / 1</span>
+            <button id="btn-next" class="pg-btn">Další</button>
+        </nav>
+
+        <section id="promo" class="promo-section">
+            <div class="promo-box">
+                <div class="promo-tag">INSTAGRAM</div>
+                <h2>Sleduj na IG</h2>
+                <p>Nenech si ujít denní dávku memů přímo ve feedu.</p>
+                <a href="https://instagram.com" target="_blank" class="btn-action">OTEVŘÍT</a>
+            </div>
+            <div class="promo-box highlight">
+                <div class="promo-tag">WHATSAPP</div>
+                <h2>Přidej se na WhatsApp</h2>
+                <p>Přímý kanál bez algoritmů. Všechny novinky hned do kapsy.</p>
+                <a href="https://whatsapp.com" target="_blank" class="btn-action">OTEVŘÍT</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; MEMEDNES — ANTI-AI ZINE STYLE</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
