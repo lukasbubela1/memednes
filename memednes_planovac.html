@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemeDnes - Planovac Faze 1</title>
+<style>
+body{font-family:Inter,system-ui;background:#0f0f0f;color:#fff;margin:0;padding:20px}
+.card{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:12px;margin:8px 0;display:flex;gap:12px;align-items:center;cursor:pointer}
+.card img{width:60px;height:60px;object-fit:cover;border-radius:8px}
+.card.selected{border-color:#00ff88;background:#15261e}
+button{background:#00ff88;color:#000;border:0;padding:12px 16px;border-radius:8px;font-weight:700;cursor:pointer;margin:5px}
+button.secondary{background:#222;color:#fff;border:1px solid #333}
+input{padding:10px;border-radius:8px;border:1px solid #333;background:#111;color:#fff;width:220px}
+pre{background:#111;padding:12px;border-radius:8px;white-space:pre-wrap}
+.tag{font-size:12px;background:#222;padding:4px 8px;border-radius:20px}
+</style>
+</head>
+<body>
+<h1>MemeDnes - Planovac Faze 1</h1>
+<p>4 pevne #: <b>#wtfmemes #memednes #funn #fyp</b> + 1 vlastni co doplnis</p>
+
+<h2>1. Nahraj memes.json</h2>
+<input type="file" id="fileInput" accept=".json">
+<div id="memeList"></div>
+
+<h2>2. Vyber 3 na Reels (tvuj vyber protoze zaciname)</h2>
+<div id="selected"></div>
+<div id="customTags"></div>
+<br>
+<button onclick="generatePlan()">GENEROVAT PLAN</button>
+<button class="secondary" onclick="downloadCSV()">Stahnout CSV pro Meta Business Suite</button>
+<pre id="output"></pre>
+
+<script>
+let memes = []; let picked = [];
+document.getElementById('fileInput').addEventListener('change', e=>{
+  const file = e.target.files[0];
+  const reader = new FileReader();
+  reader.onload = ev=>{ memes = JSON.parse(ev.target.result); renderList(); };
+  reader.readAsText(file);
+});
+function renderList(){
+  const div = document.getElementById('memeList'); div.innerHTML = '';
+  memes.slice(-20).reverse().forEach(m=>{
+    const el = document.createElement('div');
+    el.className='card'+(picked.includes(m.id)?' selected':'');
+    el.innerHTML=`<img src="${m.url}" onerror="this.src='https://via.placeholder.com/60'"><div><b>${m.title}</b><br><span class="tag">${m.category}</span> <span class="tag">${m.date}</span></div>`;
+    el.onclick=()=>toggle(m.id); div.appendChild(el);
+  });
+}
+function toggle(id){
+  if(picked.includes(id)) picked = picked.filter(x=>x!==id);
+  else { if(picked.length>=3){alert('Faze 1: max 3 na Reels'); return} picked.push(id); }
+  renderList(); renderSelected();
+}
+function renderSelected(){
+  document.getElementById('selected').innerHTML = picked.map(id=>{
+    const m = memes.find(x=>x.id===id);
+    return `<div class="card selected"><img src="${m.url}"><div>${m.title}</div></div>`;
+  }).join('');
+  document.getElementById('customTags').innerHTML = picked.map(id=>{
+    const m = memes.find(x=>x.id===id);
+    return `<label>5. # pro ${m.title}:</label><br><input id="tag-${id}" placeholder="#skola #vztahy #random"><br><br>`;
+  }).join('');
+}
+function generatePlan(){
+  if(picked.length!==3){alert('Vyber presne 3'); return}
+  let out = '=== MEMEDNES FAZE 1 ===\n\nSTORY ZITRA 9:00-18:00 (vsech 10):\nPopisek: nazev + #wtfmemes #memednes #funn #fyp\n\nREELS:\n';
+  const times = ['ZITRA 6:00','ZITRA 12:00','ZITRA 20:00'];
+  picked.forEach((id,i)=>{
+    const m = memes.find(x=>x.id===id);
+    const custom = document.getElementById(`tag-${id}`).value || '#vlastni';
+    out += `${times[i]} - ${m.title}\nCaption: ${m.title} \n.\n${custom} #wtfmemes #memednes #funn #fyp\n\n`;
+  });
+  document.getElementById('output').textContent = out;
+}
+function downloadCSV(){
+  if(picked.length!==3){alert('Vyber presne 3'); return}
+  let csv = 'date,time,media_url,caption,format\n';
+  const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+  const dateStr = tomorrow.toISOString().split('T')[0];
+  const times = ['06:00','12:00','20:00'];
+  picked.forEach((id,i)=>{
+    const m = memes.find(x=>x.id===id);
+    const custom = document.getElementById(`tag-${id}`)?.value || '#vlastni';
+    const caption = `${m.title} ${custom} #wtfmemes #memednes #funn #fyp`.replace(/"/g,'""');
+    csv += `${dateStr},${times[i]},${m.url},"${caption}",REEL\n`;
+  });
+  const blob = new Blob([csv],{type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href=url; a.download='memednes_reels.csv'; a.click();
+}
+</script>
+</body>
+</html>
