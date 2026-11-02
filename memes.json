@@ -1,134 +1,156 @@
 [
   {
-    "id": 5,
-    "title": "Meme 5",
-    "url": "img/meme/5.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 4,
-    "title": "Meme 4",
-    "url": "img/meme/4.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 3,
-    "title": "Meme 3",
-    "url": "img/meme/3.jpg",
-    "date": "2026-11-01"
+    "id": 1,
+    "title": "POCTIVÝ CYKLISTA",
+    "url": "memes/1.jpg",
+    "date": "2026",
+    "category": "Random"
   },
   {
     "id": 2,
-    "title": "Meme 2",
-    "url": "img/meme/2.jpg",
-    "date": "2026-11-01"
+    "title": "DUCHOVNÍ REALITA",
+    "url": "memes/2.jpg",
+    "date": "2026",
+    "category": "Random"
   },
   {
-    "id": 1,
-    "title": "Meme 1",
-    "url": "img/meme/1.jpg",
-    "date": "2026-11-01"
+    "id": 3,
+    "title": "ZACHARIÁŠŮV KRUH",
+    "url": "memes/3.jpg",
+    "date": "2026",
+    "category": "Vztahy"
   },
   {
-    "id": 22,
-    "title": "Meme 22",
-    "url": "img/meme/22.jpg",
-    "date": "2026-11-01"
+    "id": 4,
+    "title": "PUDOVÁ JEDNIČKA",
+    "url": "memes/4.jpg",
+    "date": "2026",
+    "category": "Škola"
   },
   {
-    "id": 21,
-    "title": "Meme 21",
-    "url": "img/meme/21.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 20,
-    "title": "Meme 20",
-    "url": "img/meme/20.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 19,
-    "title": "Meme 19",
-    "url": "img/meme/19.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 18,
-    "title": "Meme 18",
-    "url": "img/meme/18.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 17,
-    "title": "Meme 17",
-    "url": "img/meme/17.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 16,
-    "title": "Meme 16",
-    "url": "img/meme/16.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 15,
-    "title": "Meme 15",
-    "url": "img/meme/15.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 14,
-    "title": "Meme 14",
-    "url": "img/meme/14.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 13,
-    "title": "Meme 13",
-    "url": "img/meme/13.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 12,
-    "title": "Meme 12",
-    "url": "img/meme/12.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 11,
-    "title": "Meme 11",
-    "url": "img/meme/11.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 10,
-    "title": "Meme 10",
-    "url": "img/meme/10.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 9,
-    "title": "Meme 9",
-    "url": "img/meme/9.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 8,
-    "title": "Meme 8",
-    "url": "img/meme/8.jpg",
-    "date": "2026-11-01"
-  },
-  {
-    "id": 7,
-    "title": "Meme 7",
-    "url": "img/meme/7.jpg",
-    "date": "2026-11-01"
+    "id": 5,
+    "title": "TROPICKÁ VIZE",
+    "url": "memes/5.jpg",
+    "date": "2026",
+    "category": "Random"
   },
   {
     "id": 6,
-    "title": "Meme 6",
-    "url": "img/meme/6.jpg",
-    "date": "2026-11-01"
+    "title": "ČASOPROSTOROVÁ POSTEL",
+    "url": "memes/6.jpg",
+    "date": "2026",
+    "category": "Random"
+  },
+  {
+    "id": 7,
+    "title": "HYBRIDNÍ VÝPLATA",
+    "url": "memes/7.jpg",
+    "date": "2026",
+    "category": "IT"
+  },
+  {
+    "id": 8,
+    "title": "ŠKOLNÍ ZROZENÍ",
+    "url": "memes/8.jpg",
+    "date": "2026",
+    "category": "Škola"
+  },
+  {
+    "id": 9,
+    "title": "PANELÁKOVÁ OZVĚNA",
+    "url": "memes/9.jpg",
+    "date": "2026",
+    "category": "Random"
+  },
+  {
+    "id": 10,
+    "title": "AUTOŠKOLA V OHROZENÍ",
+    "url": "memes/10.jpg",
+    "date": "2026",
+    "category": "Škola"
+  },
+  {
+    "id": 11,
+    "title": "ČERSTVÝ ARGUMENT",
+    "url": "memes/11.jpg",
+    "date": "2026",
+    "category": "Vztahy"
+  },
+  {
+    "id": 12,
+    "title": "ÚPLATKY PRO BMW",
+    "url": "memes/12.jpg",
+    "date": "2026",
+    "category": "Random"
+  },
+  {
+    "id": 13,
+    "title": "PŘIROZENÁ GRAVITACE",
+    "url": "memes/13.jpg",
+    "date": "2026",
+    "category": "Random"
+  },
+  {
+    "id": 14,
+    "title": "AMERICKÁ IDENTITA",
+    "url": "memes/14.jpg",
+    "date": "2026",
+    "category": "Random"
+  },
+  {
+    "id": 15,
+    "title": "BAROVÉ DILEMA",
+    "url": "memes/15.jpg",
+    "date": "2026",
+    "category": "Vztahy"
+  },
+  {
+    "id": 16,
+    "title": "STEJNÝ OSUD",
+    "url": "memes/16.jpg",
+    "date": "2026",
+    "category": "Vztahy"
+  },
+  {
+    "id": 17,
+    "title": "ŠKOLNÍ TĚHOTENSTVÍ",
+    "url": "memes/17.jpg",
+    "date": "2026",
+    "category": "Škola"
+  },
+  {
+    "id": 18,
+    "title": "UMĚLÁ NEINTELIGENCE",
+    "url": "memes/18.jpg",
+    "date": "2026",
+    "category": "IT"
+  },
+  {
+    "id": 19,
+    "title": "KLÍČOVÁ ROMANTIKA",
+    "url": "memes/19.jpg",
+    "date": "2026",
+    "category": "Vztahy"
+  },
+  {
+    "id": 20,
+    "title": "CHMELOVÉ SMOOTHIE",
+    "url": "memes/20.jpg",
+    "date": "2026",
+    "category": "Random"
+  },
+  {
+    "id": 21,
+    "title": "NEKONEČNÝ VANDAL",
+    "url": "memes/21.jpg",
+    "date": "2026",
+    "category": "Random"
+  },
+  {
+    "id": 22,
+    "title": "IDEÁLNÍ MANŽEL V KÓMATU",
+    "url": "memes/22.jpg",
+    "date": "2026",
+    "category": "Vztahy"
   }
 ]
