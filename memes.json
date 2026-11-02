@@ -1,156 +1,156 @@
 [
   {
     "id": 1,
-    "title": "POCTIVÝ CYKLISTA",
-    "url": "memes/1.jpg",
-    "date": "2026",
+    "title": "POLICEJNÍ POPLATEK",
+    "url": "img/memes/1.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 2,
-    "title": "DUCHOVNÍ REALITA",
-    "url": "memes/2.jpg",
-    "date": "2026",
+    "title": "NEEXISTUJÍCÍ LIDÉ",
+    "url": "img/memes/2.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 3,
-    "title": "ZACHARIÁŠŮV KRUH",
-    "url": "memes/3.jpg",
-    "date": "2026",
+    "title": "BLUDNÝ KRUH LÁSKY",
+    "url": "img/memes/3.jpg",
+    "date": "2026-11-02",
     "category": "Vztahy"
   },
   {
     "id": 4,
-    "title": "PUDOVÁ JEDNIČKA",
-    "url": "memes/4.jpg",
-    "date": "2026",
+    "title": "PUDOVÁ ZÁLEŽITOST",
+    "url": "img/memes/4.jpg",
+    "date": "2026-11-02",
     "category": "Škola"
   },
   {
     "id": 5,
-    "title": "TROPICKÁ VIZE",
-    "url": "memes/5.jpg",
-    "date": "2026",
+    "title": "LETNÍ VEDRA",
+    "url": "img/memes/5.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 6,
-    "title": "ČASOPROSTOROVÁ POSTEL",
-    "url": "memes/6.jpg",
-    "date": "2026",
+    "title": "MAGICKÝ PORTÁL",
+    "url": "img/memes/6.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 7,
-    "title": "HYBRIDNÍ VÝPLATA",
-    "url": "memes/7.jpg",
-    "date": "2026",
-    "category": "IT"
+    "title": "HYBRIDNÍ MZDA",
+    "url": "img/memes/7.jpg",
+    "date": "2026-11-02",
+    "category": "Práce"
   },
   {
     "id": 8,
-    "title": "ŠKOLNÍ ZROZENÍ",
-    "url": "memes/8.jpg",
-    "date": "2026",
+    "title": "ZAČÁTEK VŠECH PROBLÉMŮ",
+    "url": "img/memes/8.jpg",
+    "date": "2026-11-02",
     "category": "Škola"
   },
   {
     "id": 9,
     "title": "PANELÁKOVÁ OZVĚNA",
-    "url": "memes/9.jpg",
-    "date": "2026",
+    "url": "img/memes/9.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 10,
-    "title": "AUTOŠKOLA V OHROZENÍ",
-    "url": "memes/10.jpg",
-    "date": "2026",
-    "category": "Škola"
+    "title": "UTOČENÁ AUTOŠKOLA",
+    "url": "img/memes/10.jpg",
+    "date": "2026-11-02",
+    "category": "Random"
   },
   {
     "id": 11,
-    "title": "ČERSTVÝ ARGUMENT",
-    "url": "memes/11.jpg",
-    "date": "2026",
+    "title": "ČERSTVÝ KNEDLÍK",
+    "url": "img/memes/11.jpg",
+    "date": "2026-11-02",
     "category": "Vztahy"
   },
   {
     "id": 12,
     "title": "ÚPLATKY PRO BMW",
-    "url": "memes/12.jpg",
-    "date": "2026",
-    "category": "Random"
+    "url": "img/memes/12.jpg",
+    "date": "2026-11-02",
+    "category": "Práce"
   },
   {
     "id": 13,
     "title": "PŘIROZENÁ GRAVITACE",
-    "url": "memes/13.jpg",
-    "date": "2026",
-    "category": "Random"
+    "url": "img/memes/13.jpg",
+    "date": "2026-11-02",
+    "category": "Vztahy"
   },
   {
     "id": 14,
-    "title": "AMERICKÁ IDENTITA",
-    "url": "memes/14.jpg",
-    "date": "2026",
+    "title": "AMERIČTÍ TURISTÉ",
+    "url": "img/memes/14.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 15,
-    "title": "BAROVÉ DILEMA",
-    "url": "memes/15.jpg",
-    "date": "2026",
+    "title": "DŮVODY K PIVU",
+    "url": "img/memes/15.jpg",
+    "date": "2026-11-02",
     "category": "Vztahy"
   },
   {
     "id": 16,
-    "title": "STEJNÝ OSUD",
-    "url": "memes/16.jpg",
-    "date": "2026",
+    "title": "NEČEKANÁ TĚHOTENSKÁ VEČEŘE",
+    "url": "img/memes/16.jpg",
+    "date": "2026-11-02",
     "category": "Vztahy"
   },
   {
     "id": 17,
     "title": "ŠKOLNÍ TĚHOTENSTVÍ",
-    "url": "memes/17.jpg",
-    "date": "2026",
+    "url": "img/memes/17.jpg",
+    "date": "2026-11-02",
     "category": "Škola"
   },
   {
     "id": 18,
-    "title": "UMĚLÁ NEINTELIGENCE",
-    "url": "memes/18.jpg",
-    "date": "2026",
+    "title": "ZLATÁ PAVLÍNA",
+    "url": "img/memes/18.jpg",
+    "date": "2026-11-02",
     "category": "IT"
   },
   {
     "id": 19,
-    "title": "KLÍČOVÁ ROMANTIKA",
-    "url": "memes/19.jpg",
-    "date": "2026",
+    "title": "ROMANTICKÉ SRDÍČKO",
+    "url": "img/memes/19.jpg",
+    "date": "2026-11-02",
     "category": "Vztahy"
   },
   {
     "id": 20,
     "title": "CHMELOVÉ SMOOTHIE",
-    "url": "memes/20.jpg",
-    "date": "2026",
+    "url": "img/memes/20.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 21,
     "title": "NEKONEČNÝ VANDAL",
-    "url": "memes/21.jpg",
-    "date": "2026",
+    "url": "img/memes/21.jpg",
+    "date": "2026-11-02",
     "category": "Random"
   },
   {
     "id": 22,
-    "title": "IDEÁLNÍ MANŽEL V KÓMATU",
-    "url": "memes/22.jpg",
-    "date": "2026",
+    "title": "IDEÁLNÍ MANŽEL",
+    "url": "img/memes/22.jpg",
+    "date": "2026-11-02",
     "category": "Vztahy"
   }
 ]
