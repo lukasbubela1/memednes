@@ -3,91 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MemeDnes - Planovac Faze 1</title>
+<title>MemeDnes - Planovac</title>
 <style>
 body{font-family:Inter,system-ui;background:#0f0f0f;color:#fff;margin:0;padding:20px}
-.card{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:12px;margin:8px 0;display:flex;gap:12px;align-items:center;cursor:pointer}
-.card img{width:70px;height:70px;object-fit:cover;border-radius:8px}
-.card.selected{border-color:#00ff88;background:#15261e}
-button{background:#00ff88;color:#000;border:0;padding:12px 18px;border-radius:8px;font-weight:700;cursor:pointer;margin:5px}
-button.secondary{background:#222;color:#fff;border:1px solid #333}
-input{padding:10px;border-radius:8px;border:1px solid #333;background:#111;color:#fff;width:250px}
-pre{background:#111;padding:12px;border-radius:8px;white-space:pre-wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:#1a1a1a;border:2px solid #333;border-radius:16px;overflow:hidden;cursor:pointer;transition:0.2s}
+.card img{width:100%;height:280px;object-fit:cover;display:block}
+.card .info{padding:12px}
+.card.selected{border-color:#00ff88;transform:scale(0.97);background:#15261e}
+.card .check{position:absolute;background:#00ff88;color:#000;font-weight:900;padding:4px 8px;border-radius:8px;margin:8px}
+.wrap{position:relative}
+button{background:#00ff88;color:#000;border:0;padding:14px 20px;border-radius:10px;font-weight:800;cursor:pointer;margin:6px;font-size:16px}
+button.secondary{background:#222;color:#fff;border:1px solid #444}
+input{padding:12px;border-radius:10px;border:1px solid #333;background:#111;color:#fff;width:100%;margin:4px 0}
 .tag{font-size:12px;background:#222;padding:4px 8px;border-radius:20px}
+pre{background:#111;padding:16px;border-radius:12px;white-space:pre-wrap;margin-top:20px}
 </style>
 </head>
 <body>
-<h1>MemeDnes - Planovac Faze 1</h1>
-<p>4 pevne #: <b>#wtfmemes #memednes #funn #fyp</b> + 1 vlastni</p>
-<p id="status">Nacitam memes.json...</p>
-<div id="memeList"></div>
+<h1>MemeDnes - Planovac</h1>
+<p>4 pevne #: <b>#wtfmemes #memednes #funn #fyp</b> + 1 vlastni pro kazdy meme</p>
+<p id="status">Nacitam...</p>
+<p><b>Vybrano: <span id="count">0</span></b> | Rozplanuje se automaticky 6:00 / 12:00 / 20:00 na dalsi dny</p>
 
-<h2>Vyber 3 na Reels (tvuj vyber)</h2>
-<div id="selected"></div>
-<div id="customTags"></div>
-<br>
+<div class="grid" id="memeList"></div>
+
+<div id="customTags" style="margin-top:30px"></div>
+
 <button onclick="generatePlan()">GENEROVAT PLAN</button>
-<button class="secondary" onclick="downloadCSV()">Stahnout CSV</button>
+<button class="secondary" onclick="downloadCSV()">Stahnout CSV na cely tyden</button>
+
 <pre id="output"></pre>
 
 <script>
 let memes = []; let picked = [];
-
-// AUTO NACTENI - uz nemusis vybirat soubor
-fetch('./memes.json')
-  .then(r=>r.json())
-  .then(data=>{ memes=data; document.getElementById('status').textContent=`Nacteno ${memes.length} memu z memes.json`; renderList(); })
-  .catch(()=>{ document.getElementById('status').textContent='Chyba - spust to pres GitHub Pages, ne jako soubor'; });
+fetch('./memes.json').then(r=>r.json()).then(data=>{
+  memes=data; 
+  document.getElementById('status').textContent=`Nacteno ${memes.length} memu - klikni na kolik chces`;
+  renderList();
+});
 
 function renderList(){
-  const div = document.getElementById('memeList'); div.innerHTML = '';
-  memes.slice(-20).reverse().forEach(m=>{
+  const div = document.getElementById('memeList'); div.innerHTML='';
+  memes.slice().reverse().forEach(m=>{
+    const isSel = picked.includes(m.id);
     const el = document.createElement('div');
-    el.className='card'+(picked.includes(m.id)?' selected':'');
-    el.innerHTML=`<img src="${m.url}" onerror="this.src='./${m.url}'"><div><b>${m.title}</b><br><span class="tag">${m.category}</span> <span class="tag">${m.date}</span></div>`;
-    el.onclick=()=>toggle(m.id); div.appendChild(el);
+    el.className='card'+(isSel?' selected':'');
+    el.innerHTML=`<div class="wrap">${isSel?'<div class="check">VYBRANO</div>':''}<img src="${m.url}" onerror="this.src='./${m.url}'" loading="lazy"></div><div class="info"><b>${m.title}</b><br><span class="tag">${m.category}</span> <span class="tag">${m.date}</span></div>`;
+    el.onclick=()=>toggle(m.id);
+    div.appendChild(el);
   });
+  document.getElementById('count').textContent=picked.length;
 }
+
 function toggle(id){
   if(picked.includes(id)) picked = picked.filter(x=>x!==id);
-  else { if(picked.length>=3){alert('Max 3 na Reels - Faze 1'); return} picked.push(id); }
-  renderList(); renderSelected();
+  else picked.push(id);
+  renderList(); renderInputs();
 }
-function renderSelected(){
-  document.getElementById('selected').innerHTML = picked.map(id=>{
+
+function renderInputs(){
+  const d = document.getElementById('customTags'); 
+  d.innerHTML = '<h2>5. hashtag pro kazdy vybrany:</h2>' + picked.map(id=>{
     const m = memes.find(x=>x.id===id);
-    return `<div class="card selected"><img src="${m.url}"><div>${m.title}</div></div>`;
-  }).join('');
-  document.getElementById('customTags').innerHTML = picked.map(id=>{
-    const m = memes.find(x=>x.id===id);
-    return `<label>5. # pro ${m.title}:</label><br><input id="tag-${id}" placeholder="#skola"><br><br>`;
+    return `<div style="display:flex;gap:10px;align-items:center;max-width:500px"><img src="${m.url}" style="width:50px;height:50px;border-radius:8px;object-fit:cover"><b style="min-width:150px">${m.title}</b><input id="tag-${id}" placeholder="#skola #vztahy"></div>`;
   }).join('');
 }
-function generatePlan(){
-  if(picked.length!==3){alert('Vyber presne 3'); return}
-  let out = '';
-  picked.forEach((id,i)=>{
-    const m = memes.find(x=>x.id===id);
-    const custom = document.getElementById(`tag-${id}`).value || '#vlastni';
-    out += `${m.title}\n.\n.\n${custom} #wtfmemes #memednes #funn #fyp\n\n---\n\n`;
-  });
-  document.getElementById('output').textContent = out;
-}
-function downloadCSV(){
-  if(picked.length!==3){alert('Vyber presne 3'); return}
-  let csv = 'date,time,media_url,caption\n';
-  const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
-  const dateStr = tomorrow.toISOString().split('T')[0];
+
+function getSchedule(){
   const times = ['06:00','12:00','20:00'];
-  picked.forEach((id,i)=>{
-    const m = memes.find(x=>x.id===id);
-    const custom = document.getElementById(`tag-${id}`)?.value || '#vlastni';
+  let dayOffset = 1; let timeIndex = 0;
+  return picked.map((id)=>{
+    const date = new Date(); date.setDate(date.getDate()+dayOffset);
+    const dateStr = date.toISOString().split('T')[0];
+    const time = times[timeIndex];
+    timeIndex++; if(timeIndex>=3){timeIndex=0; dayOffset++;}
+    return {id, dateStr, time};
+  });
+}
+
+function generatePlan(){
+  if(picked.length==0){alert('Nic nevybrano'); return}
+  let out = `PLAN NA ${Math.ceil(picked.length/3)} DNI - ${picked.length} REELS\n\n`;
+  getSchedule().forEach(s=>{
+    const m = memes.find(x=>x.id===s.id);
+    const custom = document.getElementById(`tag-${s.id}`)?.value || '#vlastni';
+    out += `${s.dateStr} ${s.time} - ${m.title}\n${m.title}\n.\n${custom} #wtfmemes #memednes #funn #fyp\n\n---\n\n`;
+  });
+  document.getElementById('output').textContent=out;
+}
+
+function downloadCSV(){
+  if(picked.length==0){alert('Nic nevybrano'); return}
+  let csv='date,time,media_url,caption\n';
+  getSchedule().forEach(s=>{
+    const m = memes.find(x=>x.id===s.id);
+    const custom = document.getElementById(`tag-${s.id}`)?.value || '#vlastni';
     const caption = `${m.title} ${custom} #wtfmemes #memednes #funn #fyp`.replace(/"/g,'""');
-    csv += `${dateStr},${times[i]},${m.url},"${caption}"\n`;
+    csv += `${s.dateStr},${s.time},${m.url},"${caption}"\n`;
   });
   const blob = new Blob([csv],{type:'text/csv'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); a.href=url; a.download='memednes_reels.csv'; a.click();
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`memednes_${picked.length}_reels.csv`; a.click();
 }
 </script>
 </body>
