@@ -429,7 +429,7 @@
   {
     "id": 62,
     "title": "HLADOVÁ DIETA",
-    "url": "img/meme/63.jpg",
+    "url": "img/meme/62.jpg",
     "date": "2026-11-11",
     "category": "Random"
   },
@@ -438,6 +438,132 @@
     "title": "SVATBA A ROZVOD V NEBI",
     "url": "img/meme/63.jpg",
     "date": "2026-11-11",
+    "category": "Vztahy"
+  },
+  {
+    "id": 64,
+    "title": "FOTBALOVÝ FANATIK",
+    "url": "img/meme/64.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 65,
+    "title": "POSLEDNÍ BLBOST",
+    "url": "img/meme/65.jpg",
+    "date": "2026-11-12",
+    "category": "Vztahy"
+  },
+  {
+    "id": 66,
+    "title": "STRACH Z INTERNETU",
+    "url": "img/meme/66.jpg",
+    "date": "2026-11-12",
+    "category": "IT"
+  },
+  {
+    "id": 67,
+    "title": "NESNÁŠÍM NÁVŠTĚVY",
+    "url": "img/meme/67.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 68,
+    "title": "FINANČNÍ POTÍŽE",
+    "url": "img/meme/68.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 69,
+    "title": "PŘEDEPSANÉ TABLETY",
+    "url": "img/meme/69.jpg",
+    "date": "2026-11-12",
+    "category": "IT"
+  },
+  {
+    "id": 70,
+    "title": "PRAVIDELNÁ STOLICE",
+    "url": "img/meme/70.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 71,
+    "title": "ČOKOLÁDOVÝ KOLÁČ",
+    "url": "img/meme/71.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 72,
+    "title": "ŽÁDNÍ PŘÁTELE",
+    "url": "img/meme/72.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 73,
+    "title": "NOČNÍ TRAPASY",
+    "url": "img/meme/73.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 74,
+    "title": "ŽIVOTNÍ ETAPY",
+    "url": "img/meme/74.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 75,
+    "title": "NOČNÍ STOVKU",
+    "url": "img/meme/75.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 76,
+    "title": "ZALÉVÁNÍ AUTA",
+    "url": "img/meme/76.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 77,
+    "title": "ŽENSKÝ ROD OD SATANA",
+    "url": "img/meme/77.jpg",
+    "date": "2026-11-12",
+    "category": "Vztahy"
+  },
+  {
+    "id": 78,
+    "title": "PERNÍKOVÁ CHALOUPKA",
+    "url": "img/meme/78.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 79,
+    "title": "JEDNONOHÝ PES",
+    "url": "img/meme/79.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 80,
+    "title": "LÉČIVÝ ALKOHOL",
+    "url": "img/meme/80.jpg",
+    "date": "2026-11-12",
+    "category": "Random"
+  },
+  {
+    "id": 81,
+    "title": "RADA DO ŽIVOTA",
+    "url": "img/meme/81.jpg",
+    "date": "2026-11-12",
     "category": "Vztahy"
   }
 ]
